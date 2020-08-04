@@ -1,4 +1,6 @@
 
+import pandas as pd
+
 def state_abbreviation(state):
 
     state_to_abbreviation = {
@@ -128,3 +130,12 @@ def abbreviation_state(abbreviation):
     return abbreviation_to_state[abbreviation]
 
 
+
+def date_extract(df_with_date_column):
+    df=df_with_date_column.copy()
+    
+    df['year'] = pd.DatetimeIndex(df['date']).year
+    df['month'] = pd.DatetimeIndex(df['date']).month
+    df['day'] = pd.DatetimeIndex(df['date']).day
+    
+    return df
