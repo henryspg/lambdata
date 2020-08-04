@@ -1,0 +1,111 @@
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)
+$ python3 -m pip install --user --upgrade setuptools wheel
+bash: /c/Users/anita/AppData/Local/Microsoft/WindowsApps/python3: Permission d
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)
+$ python  setup.py sdist bdist_wheel
+C:\Users\anita\.virtualenvs\lambdata-JJTtWtih\Scripts\python.exe: can't open fch file or directory
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)
+$ cd l
+lambdata_henry/ LICENSE
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)
+$ cd lambdata_henry/
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_he
+$ python  setup.py sdist bdist_wheel
+running sdist
+running egg_info
+creating lambdata_henry.egg-info        
+writing lambdata_henry.egg-info\PKG-INFO
+writing dependency_links to lambdata_henry.egg-info\dependency_links.txt
+writing requirements to lambdata_henry.egg-info\requires.txt
+writing top-level names to lambdata_henry.egg-info\top_level.txt
+writing manifest file 'lambdata_henry.egg-info\SOURCES.txt'
+reading manifest file 'lambdata_henry.egg-info\SOURCES.txt'
+writing manifest file 'lambdata_henry.egg-info\SOURCES.txt'
+running check
+creating lambdata_henry-0.0.1
+creating lambdata_henry-0.0.1\lambdata_henry.egg-info
+copying files to lambdata_henry-0.0.1...
+copying README.md -> lambdata_henry-0.0.1
+copying setup.py -> lambdata_henry-0.0.1
+copying lambdata_henry.egg-info\PKG-INFO -> lambdata_henry-0.0.1\lambdata_henr
+copying lambdata_henry.egg-info\SOURCES.txt -> lambdata_henry-0.0.1\lambdata_h
+copying lambdata_henry.egg-info\dependency_links.txt -> lambdata_henry-0.0.1\l
+Creating tar archive
+removing 'lambdata_henry-0.0.1' (and everything under it)
+running bdist_wheel
+running build
+installing to build\bdist.win32\wheel
+running install
+running install_egg_info
+Copying lambdata_henry.egg-info to build\bdist.win32\wheel\.\lambdata_henry-0.0.1-py3.8.egg-info
+running install_scripts
+creating build\bdist.win32\wheel\lambdata_henry-0.0.1.dist-info\WHEEL
+creating 'dist\lambdata_henry-0.0.1-py3-none-any.whl' and adding 'build\bdist.win32\wheel' to it
+adding 'lambdata_henry-0.0.1.dist-info/METADATA'
+adding 'lambdata_henry-0.0.1.dist-info/WHEEL'
+adding 'lambdata_henry-0.0.1.dist-info/top_level.txt'
+adding 'lambdata_henry-0.0.1.dist-info/RECORD'
+removing build\bdist.win32\wheel
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$ python -m pip install --user --upgrade twine
+ERROR: Can not perform a '--user' install. User site-packages are not visible 
+in this virtualenv.
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$ which python
+/c/Users/anita/.virtualenvs/lambdata-JJTtWtih/Scripts/python
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$ cd ..
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)   
+$ python -m pip install --user --upgrade twine
+ERROR: Can not perform a '--user' install. User site-packages are not visible 
+in this virtualenv.
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)   
+$ twine
+usage: twine [-h] [--version] [--no-color] {check,register,upload}
+twine: error: the following arguments are required: command, args
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata (master)   
+$ cd lambdata_henry/
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$ python -m twine upload --repository testpypi dist/*
+Uploading distributions to https://test.pypi.org/legacy/
+Enter your username: henry_gultom
+Enter your password:
+Uploading lambdata_henry-0.0.1-py3-none-any.whl
+100%|███████████████████████████████████| 4.72k/4.72k [00:02<00:00, 2.08kB/s]
+NOTE: Try --verbose to see response content.
+HTTPError: 403 Forbidden from https://test.pypi.org/legacy/
+Invalid or non-existent authentication information. See https://test.pypi.org/help/#invalid-auth for more information.
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$ python -m twine upload --repository testpypi dist/*
+Uploading distributions to https://test.pypi.org/legacy/
+Enter your username: henry_gultom
+Enter your password:
+Uploading lambdata_henry-0.0.1-py3-none-any.whl
+100%|███████████████████████████████████| 4.72k/4.72k [00:02<00:00, 2.02kB/s]
+Uploading lambdata_henry-0.0.1.tar.gz
+100%|███████████████████████████████████| 4.57k/4.57k [00:01<00:00, 3.30kB/s]
+
+View at:
+https://test.pypi.org/project/lambdata-henry/0.0.1/
+
+anita@DESKTOP-PIEEE9F MINGW64 /c/MyLearning/23-LSDS/Unit3/lambdata/lambdata_henry (master)
+$
