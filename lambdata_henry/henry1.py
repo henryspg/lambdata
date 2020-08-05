@@ -1,14 +1,8 @@
 
 import pandas as pd
 
-def state_abbreviation(state):
 
-    """
-    This code is to convert from state name to state abbrviation
-    """
-
-
-    state_to_abbreviation = {
+state_to_abbreviation = {
         'Alabama': 'AL',
         'Alaska': 'AK',
         'American Samoa': 'AS',
@@ -67,76 +61,27 @@ def state_abbreviation(state):
         'Wyoming': 'WY'
     }
 
-    return state_to_abbreviation[state]
+
+
+def get_abbreviation_from_state(state):
+
+    """
+    This code is to convert from state name to state abbrviation
+    """
+    
+    return state_to_abbreviation.get(state, state+ " does not exist. Please put in a valid state")
 
 
 
-def abbreviation_state(abbreviation):
-    abbreviation_to_state = {
-        'AK': 'Alaska',
-        'AL': 'Alabama',
-        'AR': 'Arkansas',
-        'AS': 'American Samoa',
-        'AZ': 'Arizona',
-        'CA': 'California',
-        'CO': 'Colorado',
-        'CT': 'Connecticut',
-        'DC': 'Washington DC',
-        'DE': 'Delaware',
-        'FL': 'Florida',
-        'GA': 'Georgia',
-        'GU': 'Guam',
-        'HI': 'Hawaii',
-        'IA': 'Iowa',
-        'ID': 'Idaho',
-        'IL': 'Illinois',
-        'IN': 'Indiana',
-        'KS': 'Kansas',
-        'KY': 'Kentucky',
-        'LA': 'Louisiana',
-        'MA': 'Massachusetts',
-        'MD': 'Maryland',
-        'ME': 'Maine',
-        'MI': 'Michigan',
-        'MN': 'Minnesota',
-        'MO': 'Missouri',
-        'MP': 'Northern Mariana Islands',
-        'MS': 'Mississippi',
-        'MT': 'Montana',
-        'NA': 'National',
-        'NC': 'North Carolina',
-        'ND': 'North Dakota',
-        'NE': 'Nebraska',
-        'NH': 'New Hampshire',
-        'NJ': 'New Jersey',
-        'NM': 'New Mexico',
-        'NV': 'Nevada',
-        'NY': 'New York',
-        'OH': 'Ohio',
-        'OK': 'Oklahoma',
-        'OR': 'Oregon',
-        'PA': 'Pennsylvania',
-        'PR': 'Puerto Rico',
-        'RI': 'Rhode Island',
-        'SC': 'South Carolina',
-        'SD': 'South Dakota',
-        'TN': 'Tennessee',
-        'TX': 'Texas',
-        'UT': 'Utah',
-        'VA': 'Virginia',
-        'VI': 'Virgin Islands',
-        'VT': 'Vermont',
-        'WA': 'Washington',
-        'WI': 'Wisconsin',
-        'WV': 'West Virginia',
-        'WY': 'Wyoming'
-    }
 
-    return abbreviation_to_state[abbreviation]
 
-"""
-End the function
-"""
+def get_state_from_abbreviation(abbreviation):
+   
+    abbreviation_to_state = {v: k for k, v in state_to_abbreviation.items()}
+    
+    return abbreviation_to_state.get(abbreviation, abbreviation+" does not exist. Please put in a valid abbreviation")
+
+
 
 
 
