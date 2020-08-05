@@ -1,5 +1,5 @@
 """
-lambdata - Henry's collection of Unit3 helper function
+lambdata - collection of helper function, a part of Unit-3 assignment
 """
 
 import setuptools
@@ -15,7 +15,7 @@ with open("README.md", "r") as file:
 
 setuptools.setup(
     name="lambdata_henry", 
-    version="0.0.2",
+    version="0.0.3",
     author="Henry Gultom",
     author_email="henryspg@gmail.com",
     description="date_extract, state-abbreviation",
