@@ -15,7 +15,7 @@ with open("README.md", "r") as file:
 
 setuptools.setup(
     name="lambdata_henry", 
-    version="0.0.3",
+    version="0.0.4",
     author="Henry Gultom",
     author_email="henryspg@gmail.com",
     description="date_extract, state-abbreviation",
