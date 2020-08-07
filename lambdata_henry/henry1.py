@@ -1,9 +1,14 @@
-
 import pandas as pd
 import datetime
 
 
-state_to_abbreviation = {
+class StateAbbreviation:
+    """
+    This 1st class is to convert the name of US states to its abbreviation and vice versa.
+    """
+
+#     Start with the dictionary
+    state_to_abbreviation = {
         'Alabama': 'AL',
         'Alaska': 'AK',
         'American Samoa': 'AS',
@@ -61,39 +66,46 @@ state_to_abbreviation = {
         'Wisconsin': 'WI',
         'Wyoming': 'WY'
     }
-
-
-
-def get_abbreviation_from_state(state):
-
-    """
-    This code is to convert from state name to state abbrviation
-    """
     
-    return state_to_abbreviation.get(state, state+ " does not exist. Please put in a valid state")
-
-
-
-
-
-def get_state_from_abbreviation(abbreviation):
-   
-    abbreviation_to_state = {v: k for k, v in state_to_abbreviation.items()}
     
-    return abbreviation_to_state.get(abbreviation, abbreviation+" does not exist. Please put in a valid abbreviation")
+    def __init__(self):
+        return
 
 
 
+    def get_abbreviation_from_state(self, state):
+        """ This code is to convert from state name to state abbreviation  """        
+        return self.state_to_abbreviation.get(state, state+ " does not exist. Please put in a valid state")
 
 
-def date_extract(df_with_date_column):
+
+    def get_state_from_abbreviation(self, abbreviation):
+        """ This code is to convert from abbreviation to state name """
+        
+#         Make the dictionary in reversed order
+        abbreviation_to_state = {v: k for k, v in self.state_to_abbreviation.items()}
+        return abbreviation_to_state.get(abbreviation, abbreviation+" does not exist. Please put in a valid abbreviation")
+
+    
+
+    
+class DateExtract:
     """
-    This code is about the function to extract year, month, and day from a 'date' column.
-    """
-    df=df_with_date_column.copy()
+    This 2nd class is related to a 'date' conversion.
+    """    
     
-    df['year'] = pd.DatetimeIndex(df['date']).year
-    df['month'] = pd.DatetimeIndex(df['date']).month
-    df['day'] = pd.DatetimeIndex(df['date']).day
+    def __init__(self):
+        return
     
-    return df
+    def date_extract(self, df_with_date_column):
+        """
+        This code is about the function to extract year, month, and day from a 'date' column.
+        sample: df = pd.DataFrame({'date': ['2018-08-09 11:10:55','2019-03-02 13:15:21']})
+        """
+        df=df_with_date_column.copy()
+    
+        df['year'] = pd.DatetimeIndex(df['date']).year
+        df['month'] = pd.DatetimeIndex(df['date']).month
+        df['day'] = pd.DatetimeIndex(df['date']).day
+    
+        return df
