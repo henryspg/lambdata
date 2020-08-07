@@ -74,13 +74,13 @@ class StateAbbreviation:
 
 
     def get_abbreviation_from_state(self, state):
-        """ This code is to convert from state name to state abbreviation  """        
+        """ This code is to convert a state name to abbreviation  """        
         return self.state_to_abbreviation.get(state, state+ " does not exist. Please put in a valid state")
 
 
 
     def get_state_from_abbreviation(self, abbreviation):
-        """ This code is to convert from abbreviation to state name """
+        """ This code is to convert abbreviation to state name """
         
 #         Make the dictionary in reversed order
         abbreviation_to_state = {v: k for k, v in self.state_to_abbreviation.items()}
@@ -91,7 +91,8 @@ class StateAbbreviation:
     
 class DateExtract:
     """
-    This 2nd class is related to a 'date' conversion.
+    This 2nd class is related to a 'date' conversion in a DataFrame.
+    The data type of input date is a non-datetime.
     """    
     
     def __init__(self):
